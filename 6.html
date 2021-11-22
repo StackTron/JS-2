@@ -6,7 +6,7 @@
 </head>
 <body>
 <!--
-Необязательное задание.
+Необязательное задание. НЕ УСПЕВАЮ!!!
 
 Необходимо реализовать функцию, которая будет принимать первым аргументом
 целое положительное число, в следующих трех аргументах функция принимает слова
@@ -25,7 +25,41 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   * Функция склонения слов для введённых значений.
+   * @param {number} consider - расчёт.
+   * @param {string} one - Единственное число.
+   * @param {string} two - Число с исходом до пяти.
+   * @param {string} numerous - Многочисленное.
+   * @returns {string} Вариант слова с нужным склонением.
+   */
+
+  function declinationOfNumber(consider, one, two, numerous) {
+    const num1 = consider % 10;
+    const num2 = consider % 100;
+    
+    if (num1 > 10 && num2 <= 21) {
+      return numerous;
+    }
+    if (num1 > 1 && num1 < 5) {
+      return two;
+    }
+    if (num1 === 1) {
+      return one;
+    }
+    return numerous;
+  }
+
+  // Ввод значений.
+  const apples = +prompt ('Введите колличество яблок');
+  const balls = +prompt ('Введите колличество мячей');
+  const chairs = +prompt ('Введите колличество стульев');
+
+  // Вывод слова, с нужным склонением, исходя из ввденного значения.
+  console.log(declinationOfNumber(apples, "яблоко", "яблока", "яблок")); 
+  console.log(declinationOfNumber(balls, "мяч", "мяча", "мячей")); 
+  console.log(declinationOfNumber(chairs, "стул", "стула", "стульев")); 
+  
 </script>
 </body>
 </html>

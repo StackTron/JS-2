@@ -32,7 +32,75 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   * Вычисляет операцию, переданную в третий параметр между двумя первыми
+   * аргументами функции.
+   * @param {number} arg1 первое число.
+   * @param {number} arg2 второе число.
+   * @param {string} operation - Операция, строки "+", "-", "*", "/".
+   * @return {number} Результат операции, не знаю как вывести в console.log?
+   */
+
+  function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+      case "+": return plusNumbers(arg1, arg2);
+      case "-": return differenceNumbers(arg1, arg2);
+      case "*": return multiplyNumbers(arg1, arg2);
+      case "/": return divisionNumbers(arg1, arg2);
+      default: return NaN;
+    }
+  }
+
+    // Вводим значения `a` и `b`.
+    const a = +prompt ('Ввести число a');
+    const b = +prompt ('Ввести число b');
+    
+    console.log(mathOperation(a, b, "+"));
+    console.log(mathOperation(a, b, "-"));
+    console.log(mathOperation(a, b, "*"));
+    console.log(mathOperation(a, b, "/"));
+    console.log(mathOperation(a, b, "№"));
+    
+  /**
+   * Считает сумму введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} Сумма   
+   */
+  function plusNumbers(a, b) {
+    return a + b;
+}
+
+  /**
+   * Разница введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} Разность   
+   */
+  function differenceNumbers(a, b) {
+    return Math.abs(a - b);
+}
+
+  /**
+   * Произведение введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} умножение чисел   
+   */
+  function multiplyNumbers(a, b) {
+    return a * b;
+}
+
+  /**
+   * Деление введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} деление   
+   */
+  function divisionNumbers(a, b) {
+    return a / b;
+}
+
 </script>
 </body>
 </html>
