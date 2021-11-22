@@ -6,7 +6,7 @@
 </head>
 <body>
 <!--
-Обязательное задание.  НЕ УСПЕВАЮ!!!
+Обязательное задание.
 
 Необходимо реализовать четыре функции, каждая функция должна принимать по два
 числа и выполнять одну из операций (каждая функция выполняет одну из них):
@@ -31,9 +31,61 @@
 <script>
   "use strict";
 
-  
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  /**
+   * Считает сумму введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} Сумма   
+   */
+
+  function plusNumbers(a, b) {
+    return a + b;
+}
+
+  /**
+   * Разница введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} Разность   
+   */
+
+  function differenceNumbers(a, b) {
+    return Math.abs(a - b);
+}
+
+  /**
+   * Произведение введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} умножение чисел   
+   */
+
+  function multiplyNumbers(a, b) {
+    return a * b;
+}
+
+  /**
+   * Деление введенных данных.
+   * @param {number} a ввести первое число
+   * @param {number} b ввести второе число
+   * @returns {number} деление   
+   */
+
+  function divisionNumbers(a, b) {
+    return a / b;
+}
+
+  // Вводим значения `a` и `b`.
+
+  const a = +prompt ('Введите первое число');
+  const b = +prompt ('Введите второе число');
+
+  console.log(plusNumbers(a, b));
+  console.log(differenceNumbers(a, b));
+  console.log(multiplyNumbers(a, b));
+  console.log(divisionNumbers(a, b));
+
 </script>
 </body>
 </html>
